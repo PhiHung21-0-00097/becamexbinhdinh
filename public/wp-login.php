@@ -65,30 +65,35 @@ header('location:useradmin.php');
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-3 row-container bg-white">
-            <div div class="text-center">
-              <img class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-responsive">
+            <div class="row">
+              <div div class="text-center">
+                <img class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-responsive">
+              </div>
             </div> 
-<br>
-            <div class="form-group my-3">
-              <label for="email">Tên người dùng hoặc địa chỉ Email</label>
-              <input
-                type="text"
-                class="form-control"
-                id="email" name="user"
-                placeholder=""/>
+            <div class="row">
+              <div class="form-group mt-3">
+                <label for="email">Tên người dùng hoặc Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email" name="user"
+                  placeholder=""/>
+              </div>
+              <div class="form-group mt-2">
+                <label for="password">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password" name="pass"
+                  placeholder=""/>
+              </div>
+              <div class="container">
+              <div class="form-check my-2">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Tự động đăng nhập</label>
             </div>
-            <div class="form-group my-3">
-              <label for="password">Mật khẩu</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password" name="pass"
-                placeholder=""/>
             </div>
-            <div class="form-check my-2">
-              <input type="checkbox" class="form-check-input" id="rememberMe">
-              <label class="form-check-label" for="rememberMe">Tự động đăng nhập</label>
-            </div>
+          </div>
             <div class="container">
               <div class="row">
                 <div class="col-12 g-md-2">
@@ -96,6 +101,7 @@ header('location:useradmin.php');
                 </div>
               </div>
             </div>
+            
     </form>
   </body>
 </html>

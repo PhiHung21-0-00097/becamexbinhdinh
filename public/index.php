@@ -38,10 +38,12 @@
 
                     <div class="col-6">
                         <form action="" method="post" role="form">
+                            <div class="row mt-5">
                             <h1 class="text-center text-uppercase mt-2" style="color: #ed4c34;font-family: Arial, Helvetica, sans-serif;font-size: 40px;">PHIẾU KHẢO SÁT</h1> 
                             <h4 class="text-center text-uppercase mt-2" style="color: #03B9DF;font-family: Arial, Helvetica, sans-serif;">THAM DỰ HỘI TRẠI 2023</h4> 
+                            </div>
                             <div class="row">
-                            <div class="form-group mt-5">
+                            <div class="form-group mt-3">
                                 <input style="font-family: Arial, Helvetica, sans-serif" name="name" value="" type="text" class="form-control" placeholder="Họ và tên">
                             </div>
                             
@@ -49,9 +51,9 @@
                                 <textarea style="font-family: Arial, Helvetica, sans-serif" class="form-control" name="content" rows="3" maxlength="150" placeholder="Lời nhắn"></textarea>
                             </div>
 
-                            <div class="form-group mt-3">
+                            <div class="text-center form-group mt-3">
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" name="gender" id="thamgia" value="thamgia" checked style="color: black;">
+                                    <input type="radio" name="gender" id="thamgia" value="thamgia" checked style="color: #006CB7;">
                                     <label for="thamgia" class="form-check-label" style="color: #006CB7;font-family: Arial, Helvetica, sans-serif">Tham dự</label>
                                 </div>
 
@@ -60,50 +62,49 @@
                                     <label for="tuchoi" class="form-check-label" style="color: #006CB7;font-family: Arial, Helvetica, sans-serif;">Không Tham dự</label>
                                 
                                 </div>
-                            </div>
-                        
-                            <div>
-                                <button type="submit" name="btn-submit" class="btn btn-dark btn-block mt-4 mb-4" style="background-color: #006CB7;color: white;font-family: Arial, Helvetica, sans-serif;">Gửi thông tin</button>       
-                            </div>
-                            <div class="row">
-                            <label style="color: red;" for=""> 
+                            </div >
+                        <?php
+                        ?>
+                            <div class="row form-group">
+                                <div class="col-12 text-center">
+                                    <button type="submit" name="btn-submit" class="btn  btn-dark btn-block mt-4 mb-4" style="background-color: #006CB7;color: white;font-family: Arial, Helvetica, sans-serif;width: 200px;">Gửi thông tin</button>
+                                </div>
+                            
                             <?php 
-                            $err='Bạn cần nhập đầy đủ thông tin';
-                            require 'connect.php';
+                            require 'php/db.php';
                             if(isset($_POST['btn-submit'])){
-                            echo "<pre>";  
                             $useranmee = $_POST['name'];
                             $content = $_POST['content'];
                             $gender = $_POST['gender'];
-                            if(!empty($useranmee)&&!empty($content)&&!empty($gender)){
-
-                                echo "<pre>";
-
+                            if(!empty($useranmee)&&!empty($gender)){
                                 $sql = "INSERT INTO `info_kh` (`fullName` ,`content`,`gender` ) VALUES('$useranmee','$content','$gender')";
-                                echo "<pre>";
                                 ?> 
 
                                 <?php
-                                if($conn->query($sql)===TRUE){ 
-                                ?> 
+                                if($con->query($sql)===TRUE){ 
+                                ?>
 
-                                <label style="color: green" for=""> <?php echo"Đã gửi thành công"; ?></label> 
+                                <div class="row form-group" style="width: 210px;">
+                                    <label style="color: green;background-color: #84EE8B;" for=""> <?php echo"Đã gửi thành công"; ?>
+                                    <img src="img/unnamed-removebg-preview.png" alt="" style="width: 20px;"></label> 
+                                </div>
+
                                 <?php
-                                }
-                                else{
-                                    echo "Lỗi {$sql}".$conn->error;
                                 }
                                 }else{
-                                echo $err;
+                                    ?>
+                                    <div class="row form-group " style="width: 290px;">
+                                        <label style="color: ff0000;background-color: #EE5F5F;" for=""> <?php echo"Bạn cần nhập đầy đủ thông tin"?>
+                                        <img src="img/Letter-X-Transparent-Image.png" alt="" style="width: 20px;"></label> 
+                                        </div>
+                                    <?php
                                 }
                                 } ?>
-                                </label>
-                            
                                 </div>
                             </div>
                         </form>    
                     </div>
-                    <img src="bcm.png" alt="" class="mb-2" style="width: 1000xp;">
+                    <img src="img/bcm.png" alt="" class="mb-1 " style="width: 1000xp;">
                 </div>    
             </div>
         </div>      
