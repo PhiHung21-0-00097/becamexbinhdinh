@@ -2,10 +2,7 @@
 require_once('php/db.php');
 $query = "SELECT * from info_kh";
 $result = mysqli_query($con,$query);
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,18 +78,15 @@ $result = mysqli_query($con,$query);
                                 </div>
                                 <div class="col-6">
                                     <form action="#" method="post">
-                                    <input type="text" placeholder="Tìm kiếm" class="form-control" name="noidung">
+                                    <input type="text" placeholder="Tìm kiếm theo tên NV" class="form-control" name="tukhoa">
                                     <button name="timkiem" style="">Tìm kiếm</button>
                                     </form>
                              
                                 </div>
                                 <div class="col-2">
-                                        <a style="width: 100px;height: 35px;float: right;" href="export.php" class="btn btn-success " ><i class="bi bi-download"> Export</i> </a>
+                                        <a style="width: 100px;height: 35px;float: right;" href="php/export.php" class="btn btn-success " ><i class="bi bi-download"> Export</i> </a>
                                 </div>
-                            </div>
-
-                            
-                            <div class="row mt-2">
+                                <div class="row mt-2">
                                 <table class="table table-bordered" id="my-table"> 
                                     <tr class="text-white" style="background-color:#006CB7;font-weight: bold;" >
                                         <td>ID</td>
@@ -102,8 +96,16 @@ $result = mysqli_query($con,$query);
                                         <td></td>
                                     </tr>
                                     <?php 
+                                    include 'php/db.php';
+
+                                   if(isset($_POST['timkiem'])){
+                                    $noidung = $_POST['tukhoa'];
+                                
+                                $sql = "SELECT * FROM info_kh WHERE fullName LIKE N'%".$noidung."%' ";
+                                $sqp_pro = mysqli_query($con,$sql);
+                                    
                                        $i= 1;
-                                        while($row = mysqli_fetch_assoc($result)){       
+                                        while($row = mysqli_fetch_assoc($sqp_pro)){       
                                             if($i%2==0){
                                                ?>
                                                  <tr style="background-color: #D2D0D2;">
@@ -111,7 +113,7 @@ $result = mysqli_query($con,$query);
                                         <td> <?php echo $row['fullName']; ?></td>
                                         <td> <?php echo $row['content']; ?></td>
                                         <td> <?php echo $row['gender']; ?></td>
-                                        <td><a href="xoa.php?id=<?php echo $row['id'];?>" class="btn btn-danger" style="text-align:center">Xóa</a></td>
+                                        <td><a href="php/xoa.php?id=<?php echo $row['id'];?>" class="btn btn-danger" style="text-align:center">Xóa</a></td>
                                     </tr>  
                                     <?php
                                         }else{                                    
@@ -121,14 +123,16 @@ $result = mysqli_query($con,$query);
                                         <td> <?php echo $row['fullName']; ?></td>
                                         <td> <?php echo $row['content']; ?></td>
                                         <td> <?php echo $row['gender']; ?></td>
-                                        <td><a  href="xoa.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Xóa</a></td>
+                                        <td><a  href="php/xoa.php?id=<?php echo $row['id'];?>" class="btn btn-danger">Xóa</a></td>
                                     </tr>                                              
                                     <?php
+                                        }
                                         }
                                     }
                                     ?>    
                                 </table>
-                            </div>       
+                            </div> 
+                            </div>
                     </div>
                 </div>
             </div>

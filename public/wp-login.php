@@ -6,8 +6,6 @@ header('location:useradmin.php');
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -67,10 +65,10 @@ header('location:useradmin.php');
           <div class="col-md-3 row-container bg-white">
             <div class="row">
               <div div class="text-center">
-                <img class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-responsive">
+                <img style="width: 250px;" class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-fluid">
               </div>
             </div> 
-            <div class="row">
+            <div class="row mt-3">
               <div class="form-group mt-3">
                 <label for="email">Tên người dùng hoặc Email</label>
                 <input
