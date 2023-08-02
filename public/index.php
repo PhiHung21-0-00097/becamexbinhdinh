@@ -39,27 +39,27 @@
                     <div class="col-6">
                         <form action="" method="post" role="form">
                             <div class="row mt-5">
-                            <h1 class="text-center text-uppercase mt-2" style="color: #ed4c34;font-family: Arial, Helvetica, sans-serif;font-size: 40px;">PHIẾU KHẢO SÁT</h1> 
-                            <h4 class="text-center text-uppercase mt-2" style="color: #03B9DF;font-family: Arial, Helvetica, sans-serif;">THAM DỰ HỘI TRẠI 2023</h4> 
+                            <h1 class="text-center text-uppercase mt-2" style="color: #ed4c34;font-family: Arial;font-size: 40px;">PHIẾU KHẢO SÁT</h1> 
+                            <h4 class="text-center text-uppercase mt-2" style="color: #03B9DF;font-family: Arial;">THAM DỰ HỘI TRẠI 2023</h4> 
                             </div>
                             <div class="row">
                             <div class="form-group mt-3">
-                                <input style="font-family: Arial, Helvetica, sans-serif" name="name" value="" type="text" class="form-control" placeholder="Họ và tên">
+                                <input style="font-family: Arial" name="name" value="" type="text" class="form-control" placeholder="Họ và tên">
                             </div>
                             
                             <div class="form-group mt-3">
-                                <textarea style="font-family: Arial, Helvetica, sans-serif" class="form-control" name="content" rows="3" maxlength="150" placeholder="Lời nhắn"></textarea>
+                                <textarea style="font-family: Arial" class="form-control" name="content" rows="3" maxlength="150" placeholder="Lời nhắn"></textarea>
                             </div>
 
                             <div class="text-center form-group mt-3">
                                 <div class="form-check form-check-inline">
                                     <input type="radio" name="gender" id="thamgia" value="thamgia" checked style="color: #006CB7;">
-                                    <label for="thamgia" class="form-check-label" style="color: #006CB7;font-family: Arial, Helvetica, sans-serif">Tham dự</label>
+                                    <label for="thamgia" class="form-check-label" style="color: #006CB7;font-family: Arial">Tham dự</label>
                                 </div>
 
                                 <div class="form-check form-check-inline">
                                     <input type="radio" name="gender" id="tuchoi" value="tuchoi">
-                                    <label for="tuchoi" class="form-check-label" style="color: #006CB7;font-family: Arial, Helvetica, sans-serif;">Không Tham dự</label>
+                                    <label for="tuchoi" class="form-check-label" style="color: #006CB7;font-family: Arial;">Không Tham dự</label>
                                 
                                 </div>
                             </div >
@@ -67,7 +67,7 @@
                         ?>
                             <div class="row form-group">
                                 <div class="col-12 text-center">
-                                    <button type="submit" name="btn-submit" class="btn  btn-dark btn-block mt-4 mb-4" style="background-color: #006CB7;color: white;font-family: Arial, Helvetica, sans-serif;width: 200px;">Gửi thông tin</button>
+                                    <button type="submit" name="btn-submit" class="btn  btn-dark btn-block mt-4 mb-4" style="background-color: #006CB7;color: white;font-family: Arial;width: 200px;">Gửi thông tin</button>
                                 </div>
                             
                             <?php 

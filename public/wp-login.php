@@ -12,9 +12,9 @@ header('location:useradmin.php');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ĐĂNG NHẬP</title>
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Plugins/Bootstrap/css/bootstrap.min.css">
     <link
-      href="plugins/bootstrap-icon/font/bootstrap-icons.css"
+      href="../Plugins/Bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
     <link
@@ -29,7 +29,7 @@ header('location:useradmin.php');
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://getbootstrap.com/">
   </head>
   <style>
     html, body{
@@ -51,7 +51,7 @@ header('location:useradmin.php');
 
     }
   label{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial
   }
   image{
     text-align:center;
@@ -65,9 +65,10 @@ header('location:useradmin.php');
           <div class="col-md-3 row-container bg-white">
             <div class="row">
               <div div class="text-center">
-                <img style="width: 250px;" class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-fluid">
+                <img style="width: 250px;" class="center" src="https://becamexbinhdinh.com.vn/wp-content/uploads/2021/10/logo-becamex-binhdinh.png" alt="Becamex Bình Định" class="img-thumbnail">
               </div>
             </div> 
+            <div class="container">
             <div class="row mt-3">
               <div class="form-group mt-3">
                 <label for="email">Tên người dùng hoặc Email</label>
@@ -92,10 +93,11 @@ header('location:useradmin.php');
             </div>
             </div>
           </div>
+          </div>
             <div class="container">
               <div class="row">
                 <div class="col-12 g-md-2">
-                  <button type="submit" name="btn_login" class="btn btn-success my-2" style="width: 100%;font-family: Arial, Helvetica, sans-serif;background-color: #006CB7;color:aliceblue">ĐĂNG NHẬP</button>
+                  <button type="submit" name="btn_login" class="btn btn-success my-2" style="width: 100%;font-family: Arial;background-color: #006CB7;color:aliceblue">ĐĂNG NHẬP</button>
                 </div>
               </div>
             </div>
